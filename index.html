@@ -1,222 +1,79 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Goofy Doodles</title>
-<style>
-html {
-  /* reset */
-  margin: 0;
-  padding: 0;
-}
-h1 {
-  /* reset */
-  font-weight: normal;
-  font-size: 1em;
-}
-body {
-  /* reset */
-  margin: 0;
-  padding: 0;
 
-  font: 1em/1.3 Courier, monospace;
-  color: dimgray;
-  text-align: center;
-}
+  <link rel="stylesheet" href="css/styles.css">
 
-header {
-}
-
-.doodle {
-  min-height: 100vh;
-}
-
-.doodle_anchor {
-  border: 1px dashed transparent;
-
-  /* since this contains a block-level element */
-  display: block;
-}
-
-.doodle_anchor:focus {
-  outline: none;
-  border-color: gainsboro;
-}
-
-.doodle_img {
-  display: block;
-  width: 100%;
-  max-width: 25em;
-
-  margin: 0 auto;
-}
-
-.navigation {
-  box-sizing: border-box;
-
-  padding: 0.5em;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-flow: row wrap;
-}
-
-.pagination {
-}
-
-.pagination_page {
-  display: inline-block;
-
-  text-decoration: none;
-  color: dimgray;
-  border: 1px solid;
-  box-sizing: border-box;
-  padding: 1em;
-
-  text-transform: lowercase;
-}
-.pagination_page:focus,
-.pagination_page:hover {
-  background: gainsboro;
-  color: black;
-
-  outline: none;
-}
-
-.pagination_step {
-  width: 100%;
-  margin: 0.5em 0;
-}
-
-.pagination_prev { order: 1;
-}
-.pagination_prev:before {
-  font-family: Lucida Sans Unicode, sans-serif;
-  content: '\2190\00a0';
-
-  position: relative;
-  top: 0.1em;
-}
-
-.pagination_next { order: 2;
-}
-.pagination_next:after {
-  font-family: Lucida Sans Unicode, sans-serif;
-  content: '\00a0\2192';
-
-  position: relative;
-  top: 0.1em;
-}
-
-.pagination_rand { order: 3;
-}
-
-.pagination_jumps { order: 4;
-  width: 100%;
-
-  display: flex;
-  justify-content: flex-start;
-  flex-flow: row wrap;
-}
-
-.pagination_jump {
-  margin: 0.5em;
-}
-
-@media (min-width: 29em) {
-  .pagination_prev,
-  .pagination_next {
-    flex: 1;
-  }
-  .pagination_step {
-    margin: 0.5em;
-  }
-}
-
-@media (min-width: 41em) {
-  .pagination_step {
-    width: auto;
-    flex: 1;
-  }
-
-  .pagination_prev { order: 1 }
-  .pagination_next { order: 3 }
-  .pagination_rand { order: 2 }
-}
-
-.pagination_rand:focus:before,
-.pagination_rand:hover:before,
-.pagination_rand:focus:after,
-.pagination_rand:hover:after {
-  content: ' \1f31d\ ';
-}
-
-</style>
 </head>
-<body>
+<body ontouchstart="">
+  <div class="wrappy-mcgee">
 
-  <header role='banner'>
-    <h1>Goofy Doodles</h1>
-  </header>
-
-  <main role='main'>
-
-    <article class='doodle'>
-      <a href='/permalink-page' class='doodle_anchor'>
-        <img class='doodle_img' src='img/el-tigre.jpg' alt='El Tigre: The Wrestler' />
+    <header role="banner">
+      <a href="http://goofydoodl.es" class="logo">
+        <h1>Goofy Doodles</h1>
       </a>
-    </article>
+    </header>
 
-    <article class='doodle'>
-      <a href='/permalink-page' class='doodle_anchor'>
-        <img class='doodle_img' src='img/nose.jpg' alt='I got ur nose lol' />
-      </a>
-    </article>
+    <main role="main">
 
-    <article class='doodle'>
-      <a href='/permalink-page' class='doodle_anchor'>
-        <img class='doodle_img' src='img/orphans.jpg' alt='This one goes out to, like, the orphans' />
-      </a>
-    </article>
+      <article class="doodle doodle--full">
+        <a href="inner.html" class="doodle_anchor">
+          <img class="doodle_img" src="img/el-tigre.jpg" alt="El Tigre: The Wrestler" />
+        </a>
+      </article>
 
-    <article class='doodle'>
-      <a href='/permalink-page' class='doodle_anchor'>
-        <img class='doodle_img' src='img/eye-guy.jpg' alt='Eye guy' />
-      </a>
-    </article>
+      <article class="doodle doodle--full">
+        <a href="inner.html" class="doodle_anchor">
+          <img class="doodle_img" src="img/nose.jpg" alt="I got ur nose lol" />
+        </a>
+      </article>
 
-    <article class='doodle'>
-      <a href='/permalink-page' class='doodle_anchor'>
-        <img class='doodle_img' src='img/priority.jpg' alt='When everything has priority, nothing has priority.' />
-      </a>
-    </article>
+      <article class="doodle doodle--full">
+        <a href="inner.html" class="doodle_anchor">
+          <img class="doodle_img" src="img/orphans.jpg" alt="This one goes out to, like, the orphans" />
+        </a>
+      </article>
 
-  </main>
+      <article class="doodle doodle--full">
+        <a href="inner.html" class="doodle_anchor">
+          <img class="doodle_img" src="img/eye-guy.jpg" alt="Eye guy" />
+        </a>
+      </article>
 
-  <nav class='navigation' role='navigation'>
+      <article class="doodle doodle--full">
+        <a href="inner.html" class="doodle_anchor">
+          <img class="doodle_img" src="img/priority.jpg" alt="When everything has priority, nothing has priority." />
+        </a>
+      </article>
 
-    <a href='/back' class='pagination_page pagination_step pagination_prev'>Go backward</a>
-    <a href='/forward' class='pagination_page pagination_step pagination_next'>Go forward</a>
-    <a href='/random' class='pagination_page pagination_step pagination_rand'>Surprise</a>
+    </main>
 
-    <div class="pagination_jumps">
-      <a href='/jump' class='pagination_page pagination_jump'>1</a>
-      <a href='/jump' class='pagination_page pagination_jump'>2</a>
-      <a href='/jump' class='pagination_page pagination_jump'>3</a>
-      <a href='/jump' class='pagination_page pagination_jump'>4</a>
-      <a href='/jump' class='pagination_page pagination_jump'>5</a>
-      <a href='/jump' class='pagination_page pagination_jump'>6</a>
-      <a href='/jump' class='pagination_page pagination_jump'>1</a>
-      <a href='/jump' class='pagination_page pagination_jump'>2</a>
-      <a href='/jump' class='pagination_page pagination_jump'>3</a>
-      <a href='/jump' class='pagination_page pagination_jump'>4</a>
-      <a href='/jump' class='pagination_page pagination_jump'>5</a>
-      <a href='/jump' class='pagination_page pagination_jump'>6</a>
-    </div>
+    <nav class="navigation" role="navigation">
 
-  </nav>
+      <a href="/back" class="pagination_page pagination_step pagination_prev">Go backward</a>
+      <a href="/forward" class="pagination_page pagination_step pagination_next">Go forward</a>
+      <a href="/random" class="pagination_page pagination_step pagination_rand">Surprise</a>
 
+      <div class="pagination_jumps">
+        <a href="/jump" class="pagination_page pagination_jump">1</a>
+        <a href="/jump" class="pagination_page pagination_jump">2</a>
+        <a href="/jump" class="pagination_page pagination_jump">3</a>
+        <a href="/jump" class="pagination_page pagination_jump">4</a>
+        <a href="/jump" class="pagination_page pagination_jump">5</a>
+        <a href="/jump" class="pagination_page pagination_jump">6</a>
+        <a href="/jump" class="pagination_page pagination_jump">1</a>
+        <a href="/jump" class="pagination_page pagination_jump">2</a>
+        <a href="/jump" class="pagination_page pagination_jump">3</a>
+        <a href="/jump" class="pagination_page pagination_jump">4</a>
+        <a href="/jump" class="pagination_page pagination_jump">5</a>
+        <a href="/jump" class="pagination_page pagination_jump">6</a>
+      </div>
+
+    </nav>
+
+  </div>
 </body>
 </html>
