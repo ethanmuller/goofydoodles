@@ -58,8 +58,10 @@
 
       <nav class="navigation" role="navigation">
 
-        <a href="/back" class="pagination_page pagination_step pagination_prev">Go backward</a>
-        <a href="/forward" class="pagination_page pagination_step pagination_next">Go forward</a>
+        <div class="pagination" data-total-pages="23">
+          <a href="/back" class="pagination_page pagination_step pagination_prev">Go backward</a>
+          <a href="/forward" class="pagination_page pagination_step pagination_next">Go forward</a>
+        </div>
         <!-- <a href="/random" class="pagination_page pagination_step pagination_rand">Surprise</a> -->
 
         <div class="pagination_jumps">
@@ -80,6 +82,21 @@
       </nav>
 
     </div>
+
+    <script>
+      if ('querySelector' in document) {
+        var pagination = document.querySelector('.pagination');
+            totalPages = parseInt(pagination.dataset.totalPages),
+            randomPage = Math.floor(Math.random() * totalPages) + 1,
+            randButton = document.createElement('a');
+
+        randButton.textContent = 'Surprise Me';
+        randButton.setAttribute('href', 'http://goofydoodl.es/page/' + randomPage);
+        randButton.classList.add('pagination_page', 'pagination_step', 'pagination_rand');
+
+        pagination.appendChild(randButton);
+      }
+    </script>
   </body>
 
 </html>

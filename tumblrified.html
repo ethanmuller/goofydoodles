@@ -7,7 +7,6 @@
     <title>Goofy Doodles</title>
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
-    <link rel="stylesheet" href="css/styles.css">
     {block:Description}
     <meta name="description" content="{MetaDescription}" />
     {/block:Description}
@@ -142,6 +141,13 @@
       }
 
       .pagination {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-flow: row wrap;
       }
 
       .pagination_page,
@@ -166,7 +172,7 @@
         margin: 0.5em;
       }
 
-      .pagination_page--active,
+      .pagination_jump--active,
       .pagination_page:focus,
       .pagination_page:hover {
         background: #eee;
@@ -207,7 +213,7 @@
         width: 100%;
 
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         flex-flow: row wrap;
       }
 
@@ -289,7 +295,7 @@
         {block:IndexPage}
         {block:Posts}
         {block:Photo}
-        <article class="doodle">
+        <article class="doodle doodle--full">
           <a href="{Permalink}" class="doodle_anchor">
             <img class="doodle_img" src="{PhotoURL-500}" alt="{PhotoAlt}" />
           </a>
@@ -299,11 +305,13 @@
         {block:Pagination}
         <nav class="navigation" role="navigation">
           {block:NextPage}
-          <a href="{NextPage}" class="pagination_page pagination_step pagination_prev">Go backward</a>
-          {/block:NextPage}
-          {block:PreviousPage}
-          <a href="{PreviousPage}" class="pagination_page pagination_step pagination_next">Go Forward</a>
-          {/block:PreviousPage}
+          <div class="pagination" data-total-pages="{TotalPages}">
+            <a href="{NextPage}" class="pagination_page pagination_step pagination_prev">Go backward</a>
+            {/block:NextPage}
+            {block:PreviousPage}
+            <a href="{PreviousPage}" class="pagination_page pagination_step pagination_next">Go Forward</a>
+            {/block:PreviousPage}
+          </div>
 
           <div class="pagination_jumps">
             {block:JumpPagination length="999"}
@@ -323,10 +331,8 @@
         {block:PermalinkPage}
         {block:Posts}
         {block:Photo}
-        <article class="doodle doodle--full">
-          <a href="{LinkURL}" class="doodle_anchor">
-            <img class="doodle_img" src="{PhotoURL-500}" alt="{PhotoAlt}" />
-          </a>
+        <article class="doodle">
+          <img class="doodle_img" src="{PhotoURL-500}" alt="{PhotoAlt}" />
         </article>
         {block:PostNotes}
         <div class="popularity">
@@ -343,6 +349,21 @@
 
 
     </div>
+
+    <script>
+      if ('querySelector' in document) {
+        var pagination = document.querySelector('.pagination');
+            totalPages = parseInt(pagination.dataset.totalPages),
+            randomPage = Math.floor(Math.random() * totalPages) + 1,
+            randButton = document.createElement('a');
+
+        randButton.textContent = 'Surprise Me';
+        randButton.setAttribute('href', 'http://goofydoodl.es/page/' + randomPage);
+        randButton.classList.add('pagination_page', 'pagination_step', 'pagination_rand');
+
+        pagination.appendChild(randButton);
+      }
+    </script>
   </body>
 
 </html>

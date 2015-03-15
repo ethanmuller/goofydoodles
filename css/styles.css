@@ -127,6 +127,13 @@ header {
 }
 
 .pagination {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-flow: row wrap;
 }
 
 .pagination_page,
