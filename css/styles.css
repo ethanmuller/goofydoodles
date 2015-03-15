@@ -1,3 +1,4 @@
+
 html, ol, ul {
   /* reset */
   margin: 0;
@@ -17,7 +18,7 @@ a {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 a:visited {
-  color: rgb(189, 0, 227);
+  color: #aaa;
 }
 
 body {
@@ -113,7 +114,7 @@ header {
   margin: 0 auto;
 }
 
-.navigation {
+.pagination {
   min-height: 25vh;
 
   box-sizing: border-box;
@@ -126,8 +127,9 @@ header {
   flex-flow: row wrap;
 }
 
-.pagination {
+.pagination_steps {
   width: 100%;
+  margin-bottom: 4em;
 
   display: flex;
   justify-content: space-around;
@@ -156,6 +158,14 @@ header {
 
 .pagination_jump {
   margin: 0.5em;
+}
+
+.touch-doesnt-seem-to-be-supported .pagination_jump {
+  opacity: 0.6;
+}
+
+.touch-doesnt-seem-to-be-supported .pagination_jump:hover {
+  opacity: 1;
 }
 
 .pagination_page--active,
@@ -199,7 +209,7 @@ header {
   width: 100%;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-flow: row wrap;
 }
 

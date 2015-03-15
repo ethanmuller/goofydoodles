@@ -25,44 +25,44 @@
       <main role="main">
 
         <article class="doodle doodle--full">
-          <a href="inner.html" class="doodle_anchor">
+          <a href="inner.html" class="doodle_anchor" title="alt text">
             <img class="doodle_img" src="img/el-tigre.jpg" alt="El Tigre: The Wrestler" />
           </a>
         </article>
 
         <article class="doodle doodle--full">
-          <a href="inner.html" class="doodle_anchor">
+          <a href="inner.html" class="doodle_anchor" title="alt text">
             <img class="doodle_img" src="img/nose.jpg" alt="I got ur nose lol" />
           </a>
         </article>
 
         <article class="doodle doodle--full">
-          <a href="inner.html" class="doodle_anchor">
+          <a href="inner.html" class="doodle_anchor" title="alt text">
             <img class="doodle_img" src="img/orphans.jpg" alt="This one goes out to, like, the orphans" />
           </a>
         </article>
 
         <article class="doodle doodle--full">
-          <a href="inner.html" class="doodle_anchor">
+          <a href="inner.html" class="doodle_anchor" title="alt text">
             <img class="doodle_img" src="img/eye-guy.jpg" alt="Eye guy" />
           </a>
         </article>
 
         <article class="doodle doodle--full">
-          <a href="inner.html" class="doodle_anchor">
+          <a href="inner.html" class="doodle_anchor" title="alt text">
             <img class="doodle_img" src="img/priority.jpg" alt="When everything has priority, nothing has priority." />
           </a>
         </article>
 
       </main>
 
-      <nav class="navigation" role="navigation">
+      <nav class="pagination" role="navigation">
 
-        <div class="pagination" data-total-pages="23">
+        <div class="pagination_steps" data-total-pages="23">
           <a href="/back" class="pagination_page pagination_step pagination_prev">Go backward</a>
           <a href="/forward" class="pagination_page pagination_step pagination_next">Go forward</a>
+          <!-- <a href="/random" class="pagination_page pagination_step pagination_rand">Surprise</a> -->
         </div>
-        <!-- <a href="/random" class="pagination_page pagination_step pagination_rand">Surprise</a> -->
 
         <div class="pagination_jumps">
           <a href="/jump" class="pagination_page pagination_jump">1</a>
@@ -85,17 +85,24 @@
 
     <script>
       if ('querySelector' in document) {
-        var pagination = document.querySelector('.pagination');
-            totalPages = parseInt(pagination.dataset.totalPages),
-            randomPage = Math.floor(Math.random() * totalPages) + 1,
-            randButton = document.createElement('a');
+        var pagination = document.querySelector('.pagination_steps'),
+            totalPages, randomPage, randButton;
 
-        randButton.textContent = 'Surprise Me';
-        randButton.setAttribute('href', 'http://goofydoodl.es/page/' + randomPage);
-        randButton.classList.add('pagination_page', 'pagination_step', 'pagination_rand');
-
-        pagination.appendChild(randButton);
+        if (pagination) {
+          totalPages = parseInt(pagination.dataset.totalPages);
+          randomPage = Math.floor(Math.random() * totalPages) + 1;
+          randButton = document.createElement('a');
+          randButton.textContent = 'Surprise Me';
+          randButton.setAttribute('href', 'http://goofydoodl.es/page/' + randomPage);
+          randButton.classList.add('pagination_page', 'pagination_step', 'pagination_rand');
+          pagination.appendChild(randButton);
+        }
       }
+
+      if (!('ontouchstart' in window)) {
+        document.querySelector('body').classList.add('touch-doesnt-seem-to-be-supported');
+      }
+
     </script>
   </body>
 

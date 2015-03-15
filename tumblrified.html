@@ -12,272 +12,281 @@
     {/block:Description}
 
     <style>
-      html, ol, ul {
-        /* reset */
-        margin: 0;
-        padding: 0;
-      }
+html, ol, ul {
+  /* reset */
+  margin: 0;
+  padding: 0;
+}
 
-      h1, h2 {
-        /* reset */
-        font-weight: normal;
-        font-size: 1em;
-        margin: 0;
-      }
+h1, h2 {
+  /* reset */
+  font-weight: normal;
+  font-size: 1em;
+  margin: 0;
+}
 
-      a {
-        color: rgb(0, 70, 255);
-        text-decoration: underline;
-        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-      }
-      a:visited {
-        color: #aaa;
-      }
+a {
+  color: rgb(0, 70, 255);
+  text-decoration: underline;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+a:visited {
+  color: #aaa;
+}
 
-      body {
-        /* reset */
-        margin: 0;
-        padding: 0;
+body {
+  /* reset */
+  margin: 0;
+  padding: 0;
 
-        font: 1em/1.3 Courier, monospace;
-        color: dimgray;
-        text-align: center;
-      }
+  font: 1em/1.3 Courier, monospace;
+  color: dimgray;
+  text-align: center;
+}
 
-      .wrappy-mcgee {
-        max-width: 50em;
-        margin: 0 auto;
-      }
+.wrappy-mcgee {
+  max-width: 50em;
+  margin: 0 auto;
+}
 
-      header {
-        min-height: 10vh;
+header {
+  min-height: 10vh;
 
-        margin: 1em 0;
+  margin: 1em 0;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-      .logo,
-      .logo:visited {
-        color: dimgray;
-        display: inline-block;
-        text-decoration: none;
-        padding: 1em;
-        border: 1px solid transparent;
-      }
-      .logo:focus,
-      .logo:active,
-      .logo:hover {
-        background: #eee;
-        color: black;
-        border-color: black;
+.logo,
+.logo:visited {
+  color: dimgray;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em;
+  border: 1px solid transparent;
+}
+.logo:focus,
+.logo:active,
+.logo:hover {
+  background: #eee;
+  color: black;
+  border-color: black;
 
-        outline: none;
-      }
-      .logo h1:before,
-      .logo h1:after {
-        content: ' \2728\ ';
-        volume: silent
-        speak: none;
+  outline: none;
+}
+.logo h1:before,
+.logo h1:after {
+  content: ' \2728\ ';
+  volume: silent
+  speak: none;
 
-        opacity: 0;
-      }
+  opacity: 0;
+}
 
-      .logo:focus h1:before,
-      .logo:focus h1:after,
-      .logo:active h1:before,
-      .logo:active h1:after,
-      .logo:hover h1:before,
-      .logo:hover h1:after {
-        opacity: 1;
-      }
+.logo:focus h1:before,
+.logo:focus h1:after,
+.logo:active h1:before,
+.logo:active h1:after,
+.logo:hover h1:before,
+.logo:hover h1:after {
+  opacity: 1;
+}
 
-      .doodle {
-        min-height: 100vh;
-      }
+.doodle {
+  min-height: 100vh;
+}
 
-      .doodle--full:first-of-type {
-        min-height: 60vh;
-        padding-bottom: 50vh;
+.doodle--full:first-of-type {
+  min-height: 60vh;
+  padding-bottom: 50vh;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-      .doodle_anchor {
-        border: 1px dashed transparent;
+.doodle_anchor {
+  border: 1px dashed transparent;
 
-        /* since this contains a block-level element */
-        display: inline-block;
-      }
+  /* since this contains a block-level element */
+  display: inline-block;
+}
 
-      .doodle_anchor:focus {
-        outline: none;
-        border-color: gainsboro;
-      }
+.doodle_anchor:focus {
+  outline: none;
+  border-color: gainsboro;
+}
 
-      .doodle_img {
-        display: block;
-        width: 100%;
-        max-width: 31em;
+.doodle_img {
+  display: block;
+  width: 100%;
+  max-width: 31em;
 
-        margin: 0 auto;
-      }
+  margin: 0 auto;
+}
 
-      .navigation {
-        min-height: 25vh;
+.pagination {
+  min-height: 25vh;
 
-        box-sizing: border-box;
-        padding: 0.5em;
+  box-sizing: border-box;
+  padding: 0.5em;
 
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-flow: row wrap;
-      }
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-flow: row wrap;
+}
 
-      .pagination {
-        width: 100%;
+.pagination_steps {
+  width: 100%;
+  margin-bottom: 4em;
 
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-flow: row wrap;
-      }
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-flow: row wrap;
+}
 
-      .pagination_page,
-      .pagination_page:visited {
-        display: inline-block;
+.pagination_page,
+.pagination_page:visited {
+  display: inline-block;
 
-        text-decoration: none;
-        color: dimgray;
-        border: 1px solid gainsboro;
-        box-sizing: border-box;
-        padding: 1em;
+  text-decoration: none;
+  color: dimgray;
+  border: 1px solid gainsboro;
+  box-sizing: border-box;
+  padding: 1em;
 
-        text-transform: lowercase;
-      }
+  text-transform: lowercase;
+}
 
-      .pagination_step {
-        width: 100%;
-        margin: 0.5em 0;
-      }
+.pagination_step {
+  width: 100%;
+  margin: 0.5em 0;
+}
 
-      .pagination_jump {
-        margin: 0.5em;
-      }
+.pagination_jump {
+  margin: 0.5em;
+}
 
-      .pagination_jump--active,
-      .pagination_page:focus,
-      .pagination_page:hover {
-        background: #eee;
-        color: black;
-        border-color: black;
+.touch-doesnt-seem-to-be-supported .pagination_jump {
+  opacity: 0.6;
+}
 
-        outline: none;
-      }
+.touch-doesnt-seem-to-be-supported .pagination_jump:hover {
+  opacity: 1;
+}
 
-      .pagination_prev { order: 1;
-      }
-      .pagination_prev:before {
-        font-family: Lucida Sans Unicode, sans-serif;
-        content: '\2190\00a0';
-        volume: silent
-        speak: none;
+.pagination_page--active,
+.pagination_page:focus,
+.pagination_page:hover {
+  background: #eee;
+  color: black;
+  border-color: black;
 
-        position: relative;
-        top: 0.1em;
-      }
+  outline: none;
+}
 
-      .pagination_next { order: 2;
-      }
-      .pagination_next:after {
-        font-family: Lucida Sans Unicode, sans-serif;
-        content: '\00a0\2192';
-        volume: silent
-        speak: none;
+.pagination_prev { order: 1;
+}
+.pagination_prev:before {
+  font-family: Lucida Sans Unicode, sans-serif;
+  content: '\2190\00a0';
+  volume: silent
+  speak: none;
 
-        position: relative;
-        top: 0.1em;
-      }
+  position: relative;
+  top: 0.1em;
+}
 
-      .pagination_rand { order: 3;
-      }
+.pagination_next { order: 2;
+}
+.pagination_next:after {
+  font-family: Lucida Sans Unicode, sans-serif;
+  content: '\00a0\2192';
+  volume: silent
+  speak: none;
 
-      .pagination_jumps { order: 4;
-        width: 100%;
+  position: relative;
+  top: 0.1em;
+}
 
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-      }
+.pagination_rand { order: 3;
+}
 
-      @media (min-width: 29em) {
-        .pagination_prev,
-        .pagination_next {
-          flex: 1;
-        }
-        .pagination_step {
-          margin: 0.5em;
-        }
-      }
+.pagination_jumps { order: 4;
+  width: 100%;
 
-      @media (min-width: 41em) {
-        .pagination_step {
-          width: auto;
-          flex: 1;
-        }
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
 
-        .pagination_prev { order: 1 }
-        .pagination_next { order: 3 }
-        .pagination_rand { order: 2 }
-      }
+@media (min-width: 29em) {
+  .pagination_prev,
+  .pagination_next {
+    flex: 1;
+  }
+  .pagination_step {
+    margin: 0.5em;
+  }
+}
 
-      .pagination_rand:focus:before,
-      .pagination_rand:hover:before,
-      .pagination_rand:focus:after,
-      .pagination_rand:hover:after {
-        content: ' \1f31d\ ';
-        volume: silent
-        speak: none;
-      }
+@media (min-width: 41em) {
+  .pagination_step {
+    width: auto;
+    flex: 1;
+  }
 
-      .popularity {
-        margin: 3em 0 6em;
-        padding: 0 1em;
-      }
+  .pagination_prev { order: 1 }
+  .pagination_next { order: 3 }
+  .pagination_rand { order: 2 }
+}
 
-      .popularity_heading {
-        font-weight: bold;
-        margin-bottom: 3em;
-      }
+.pagination_rand:focus:before,
+.pagination_rand:hover:before,
+.pagination_rand:focus:after,
+.pagination_rand:hover:after {
+  content: ' \1f31d\ ';
+  volume: silent
+  speak: none;
+}
 
-      .popularity ol {
-        list-style: none;
-      }
+.popularity {
+  margin: 3em 0 6em;
+  padding: 0 1em;
+}
 
-      .popularity li {
-        margin-bottom: 3em;
-        padding-bottom: 3em;
-        position: relative;
-      }
+.popularity_heading {
+  font-weight: bold;
+  margin-bottom: 3em;
+}
 
-      .popularity .action {
-        display: block;
-      }
+.popularity ol {
+  list-style: none;
+}
 
-      .popularity .tumblelog:after,
-      .popularity .source_tumblelog:before,
-      .popularity a:only-child:after {
-        white-space: pre;
-        content: '\A';
-      }
-    </style>
+.popularity li {
+  margin-bottom: 3em;
+  padding-bottom: 3em;
+  position: relative;
+}
+
+.popularity .action {
+  display: block;
+}
+
+.popularity .tumblelog:after,
+.popularity .source_tumblelog:before,
+.popularity a:only-child:after {
+  white-space: pre;
+  content: '\A';
+}
+</style>
   </head>
 
   <body ontouchstart="">
@@ -296,16 +305,16 @@
         {block:Posts}
         {block:Photo}
         <article class="doodle doodle--full">
-          <a href="{Permalink}" class="doodle_anchor">
+          <a href="{Permalink}" class="doodle_anchor" title="{PhotoAlt}">
             <img class="doodle_img" src="{PhotoURL-500}" alt="{PhotoAlt}" />
           </a>
         </article>
         {/block:Photo}
         {/block:Posts}
         {block:Pagination}
-        <nav class="navigation" role="navigation">
+        <nav class="pagination" role="navigation">
           {block:NextPage}
-          <div class="pagination" data-total-pages="{TotalPages}">
+          <div class="pagination_steps" data-total-pages="{TotalPages}">
             <a href="{NextPage}" class="pagination_page pagination_step pagination_prev">Go backward</a>
             {/block:NextPage}
             {block:PreviousPage}
@@ -333,13 +342,13 @@
         {block:Photo}
         <article class="doodle">
           <img class="doodle_img" src="{PhotoURL-500}" alt="{PhotoAlt}" />
-        </article>
         {block:PostNotes}
         <div class="popularity">
           <h2 class="popularity_heading">Notes</h2>
           {PostNotes}
         </div>
         {/block:PostNotes}
+        </article>
         {/block:Photo}
         {/block:Posts}
         {/block:PermalinkPage}
@@ -352,17 +361,24 @@
 
     <script>
       if ('querySelector' in document) {
-        var pagination = document.querySelector('.pagination');
-            totalPages = parseInt(pagination.dataset.totalPages),
-            randomPage = Math.floor(Math.random() * totalPages) + 1,
-            randButton = document.createElement('a');
+        var pagination = document.querySelector('.pagination_steps'),
+            totalPages, randomPage, randButton;
 
-        randButton.textContent = 'Surprise Me';
-        randButton.setAttribute('href', 'http://goofydoodl.es/page/' + randomPage);
-        randButton.classList.add('pagination_page', 'pagination_step', 'pagination_rand');
-
-        pagination.appendChild(randButton);
+        if (pagination) {
+          totalPages = parseInt(pagination.dataset.totalPages);
+          randomPage = Math.floor(Math.random() * totalPages) + 1;
+          randButton = document.createElement('a');
+          randButton.textContent = 'Surprise Me';
+          randButton.setAttribute('href', 'http://goofydoodl.es/page/' + randomPage);
+          randButton.classList.add('pagination_page', 'pagination_step', 'pagination_rand');
+          pagination.appendChild(randButton);
+        }
       }
+
+      if (!('ontouchstart' in window)) {
+        document.querySelector('body').classList.add('touch-doesnt-seem-to-be-supported');
+      }
+
     </script>
   </body>
 
