@@ -129,7 +129,8 @@ header {
 .pagination {
 }
 
-.pagination_page {
+.pagination_page,
+.pagination_page:visited {
   display: inline-block;
 
   text-decoration: none;
@@ -150,6 +151,7 @@ header {
   margin: 0.5em;
 }
 
+.pagination_page--active,
 .pagination_page:focus,
 .pagination_page:hover {
   background: #eee;
