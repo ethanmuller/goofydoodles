@@ -331,13 +331,13 @@ header {
         {/block:Posts}
         {block:Pagination}
         <nav class="pagination" role="navigation">
-          {block:NextPage}
           <div class="pagination_steps" data-total-pages="{TotalPages}">
-            <a href="{NextPage}" class="pagination_page pagination_step pagination_prev">Go backward</a>
-            {/block:NextPage}
-            {block:PreviousPage}
-            <a href="{PreviousPage}" class="pagination_page pagination_step pagination_next">Go Forward</a>
-            {/block:PreviousPage}
+          {block:PreviousPage}
+            <a href="{PreviousPage}" class="pagination_page pagination_step pagination_prev">Newer</a>
+          {/block:PreviousPage}
+          {block:NextPage}
+            <a href="{NextPage}" class="pagination_page pagination_step pagination_next">Older</a>
+          {/block:NextPage}
           </div>
 
           <div class="pagination_jumps">
